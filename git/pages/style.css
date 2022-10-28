@@ -1,0 +1,31 @@
+body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	background-color: rgb(233, 233, 233);
+	color: rgb(8, 0, 79);
+	width: 100%;
+}
+
+.form {
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30%;
+	height: 150px;
+}
+
+.title {
+	margin-bottom: 150px;
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+}
