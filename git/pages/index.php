@@ -29,21 +29,43 @@ session_start();
 	<?php
 	include __DIR__ . '/functions.php';
 
+
 	if (null !== getCurrentUser()) { ?>
-	<h1>	Здравствуйте, <?php echo getCurrentUser(); ?></h1>
+	<h1>	Здравствуйте, <?php 
+	echo (getCurrentUser()); 
+	}?></h1>
+
 	<?php
-	}
+	if (null !== getDateBirthday()) {  
+			echo (getDateBirthday());
+		}
 	?>
 	<br>
 	
 	<?php
-if (null !== getDateBirthday()) {  
-	echo getDateBirthday();
-}
+	// include __DIR__ . '/login_processing.php';
+// if (null !== getDateBirthday()) {  
+// 	echo (getDateBirthday());
+// }
+// if (null !== getDateBirthday()) {  
+	// echo ("Ваш день рождения: " . (int) $_SESSION['day'] .".".(int) $_SESSION['month'].".". (int) $_SESSION['year']."<br>");
+// }
 		
-   // echo ("Ваш день рождения: " . (int) $_POST['day'] .".".(int) $_POST['month'].".". (int) $_POST['year']."<br>");
+   // echo ("Ваш день рождения: " . (int) $_SESSION['day'] .".".(int) $_SESSION['month'].".". (int) $_SESSION['year']."<br>");
 		
-			 
+// 	function getDateBirthday() {
+// 		$day=$_SESSION['day'];
+// 		$month=$_SESSION['month'];
+// 		$year=$_SESSION['year'];
+// 		if ($day==0||$month==0||$year==0) 
+// 		{
+// 			 echo ("<font class=regEr>&nbspВы не ввели дату рождения.</font>");
+// 		}
+// 		else {
+// 			echo ("Ваш день рождения: " . (int) $_SESSION['day'] .".".(int) $_SESSION['month'].".". (int) $_SESSION['year']."<br>");
+// 		// }
+// 		}
+// }
 	// $date = new DatePeriod('date');
 	//   $birthday = $date;
 

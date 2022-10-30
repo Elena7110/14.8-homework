@@ -1,20 +1,20 @@
-<?php
+ <?php
 
 session_start();
 
-include __DIR__ . '/pages/functions.php';
+include __DIR__ . '/pages/functions.php'; 
 
 // Если данные пришли проверяем их и записываем данные в сессию
-if (isset($_POST['user']) && isset($_POST['password'])) {
-	if (сheckPassword($_POST['user'], $_POST['password'])) {
-		$_SESSION['user'] = $_POST['user'];
-	}
-}
+// if (isset($_POST['user']) && isset($_POST['password'])) {
+// 	if (сheckPassword($_POST['user'], $_POST['password'])) {
+// 		$_SESSION['user'] = $_POST['user'];
+// 	}
+// }
 
 // Если пользователь вошел - перенаправляем на страницу, в противном случае - форма
-if (null !== getCurrentUser()) {
-	header('Location: pages/index.php');
-} else { ?>
+// if (null !== getCurrentUser()) {
+// 	header('Location: pages/index.php');
+// } else { ?>
 	<!DOCTYPE html>
 	<!--атрибут lang определяет язык содержимого элемента.-->
 	<html lang="ru">
@@ -36,7 +36,7 @@ if (null !== getCurrentUser()) {
 
 	<body style="background-image:url(img/top.jpg);background-size:cover;background-attachment:fixed;background-position:center;">
 		<h1 class="title">Парикмахерская "Горгона"</h1>
-		<form method="post" action="login.php" class="form" >
+		<form method="post" action="pages/login_processing.php" class="form" >
 			<label>Логин</label>
 			<input type="text" name="user" placeholder="Введите свой логин">
 			<label>Пароль</label>
@@ -52,6 +52,3 @@ if (null !== getCurrentUser()) {
 	</html>
 
 
-<?php
-}
-?>

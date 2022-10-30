@@ -17,7 +17,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	width: 30%;
-	height: 150px;
+	height: 200px;
 }
 
 .title {
@@ -27,5 +27,5 @@ body {
 .profile {
 	display: flex;
 	flex-direction: column;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 }
