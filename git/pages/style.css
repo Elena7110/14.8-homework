@@ -24,8 +24,13 @@ body {
 	margin-bottom: 150px;
 }
 
-.profile {
-	display: flex;
-	flex-direction: column;
-	/* border: 1px solid black; */
+.sale {
+	border: 1px solid red;
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.msg {
+	color: red;
 }

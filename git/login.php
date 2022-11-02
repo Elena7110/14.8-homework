@@ -2,19 +2,7 @@
 
 session_start();
 
-include __DIR__ . '/pages/functions.php'; 
-
-// Если данные пришли проверяем их и записываем данные в сессию
-// if (isset($_POST['user']) && isset($_POST['password'])) {
-// 	if (сheckPassword($_POST['user'], $_POST['password'])) {
-// 		$_SESSION['user'] = $_POST['user'];
-// 	}
-// }
-
-// Если пользователь вошел - перенаправляем на страницу, в противном случае - форма
-// if (null !== getCurrentUser()) {
-// 	header('Location: pages/index.php');
-// } else { ?>
+ ?>
 	<!DOCTYPE html>
 	<!--атрибут lang определяет язык содержимого элемента.-->
 	<html lang="ru">
@@ -36,7 +24,7 @@ include __DIR__ . '/pages/functions.php';
 
 	<body style="background-image:url(img/top.jpg);background-size:cover;background-attachment:fixed;background-position:center;">
 		<h1 class="title">Парикмахерская "Горгона"</h1>
-		<form method="post" action="pages/login_processing.php" class="form" >
+		<form method="post" action="pages/index.php" class="form" >
 			<label>Логин</label>
 			<input type="text" name="user" placeholder="Введите свой логин">
 			<label>Пароль</label>
@@ -46,6 +34,12 @@ include __DIR__ . '/pages/functions.php';
 		<input type="number" name="month" id="month" min=" 1" max="12" placeholder="Введите месяц рождения">
 		<input type="number" name="year" id="year" min="1900" max="2022" placeholder="Введите год рождения">
 			<button type="submit">Войти</button>
+			<?php
+            if ($_SESSION['message']) {
+                echo "<p style = color:red;> " . $_SESSION['message'] . " </p>";
+            }
+            unset($_SESSION['message']);
+        ?>
 		</form>
 	</body>
 
