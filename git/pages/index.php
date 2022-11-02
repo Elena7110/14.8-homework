@@ -21,9 +21,10 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="style.css" media="all">
 </head>
 
-<body style="background-image:url(../img/medusa-1.jpg);background-size:50%;background-repeat:no-repeat;background-attachment:fixed;background-position:left;">
+<body style="display: flex;justify-content: end; background-image:url(../img/medusa-1.jpg);background-size:50%;background-repeat:no-repeat;background-attachment:fixed;background-position:left;">
 
-	<div style="border: 1px solid black;display: flex;flex-direction: column;width:30%;top: 50%;margin:auto 20% auto auto;">
+
+	<div style="border: 1px solid black;display: flex;flex-direction: column;width:30%;top: 50%;margin:20%; ">
 
 
 
